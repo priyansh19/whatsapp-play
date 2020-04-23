@@ -1,11 +1,17 @@
 <p align="center">
+<<<<<<< HEAD
   <img src="images/Screenshot%20from%202020-03-31%2016-16-31.png">
+=======
+  <img src="images/logo.png">
+>>>>>>> upstream/master
 </p>
             
 [![Downloads](https://pepy.tech/badge/wplay)](https://pepy.tech/project/wplay)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/749acf4cad424fbeb96a412963aa83ea)](https://app.codacy.com/app/rpotter12/whatsapp-play?utm_source=github.com&utm_medium=referral&utm_content=rpotter12/whatsapp-play&utm_campaign=Badge_Grade_Settings)
-[![PyPi](https://img.shields.io/badge/pypi-v5.0.2-blue)](https://pypi.org/project/wplay/)
+[![PyPi](https://img.shields.io/pypi/v/wplay)](https://img.shields.io/pypi/v/wplay)
 ![CircleCI](https://circleci.com/gh/rpotter12/whatsapp-play/tree/master.svg?style=svg&circle-token=2b67dd21e60a01fdd36a670629574479aeb2f5c4)
+[![Docker](https://img.shields.io/docker/cloud/build/rpotter12/whatsapp-play)](https://img.shields.io/docker/cloud/build/rpotter12/whatsapp-play)
+[![Build Status](https://travis-ci.org/rpotter12/whatsapp-play.svg?branch=master)](https://travis-ci.org/rpotter12/whatsapp-play)
 [![twitter](https://img.shields.io/twitter/url/https/github.com/rpotter12/whatsapp-play.svg?style=social)](https://twitter.com/rpotter121998)
 [![HitCount](http://hits.dwyl.io/rpotter12/whatsapp-play.svg)](http://hits.dwyl.io/rpotter12/whatsapp-play)
 [![Gitter](https://badges.gitter.im/whatsapp-play/community.svg)](https://gitter.im/whatsapp-play/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -13,17 +19,27 @@
 
 It is command line software through which you can play with your WhatsApp. It is having different options to play with your WhatsApp like message blast, online tracking, whatsapp chat.. This software aims to provide all facilities which we can do with WhatsApp. This CLI software does not require any API key for the execution.
 
-***wchat*** stands for WhatsApp chat. Through this you can chat with your WhatsApp contact directly from the command line.
+***terminal_chat*** stands for WhatsApp chat. Through this you can chat with your WhatsApp contact directly from the command line.
 
-***onlinetracker*** tracks the online and offline timings of your WhatsApp contact. It will check the online status and will immediately stores that data into a .txt file. Blog link: [https://github.com/rpotter12/rpotter12.github.io/blob/master/blogs/blog3-tracking-26-07-2019.md](https://github.com/rpotter12/rpotter12.github.io/blob/master/blogs/blog3-tracking-26-07-2019.md)
+***message_service*** It's a substitute for the API, allow you to communicate your programs to wplay. You modify our file messages.json with the number and message and the service will read the JSON and send the message. Check [Wiki Usage](https://github.com/rpotter12/whatsapp-play/wiki/Usage#whatsapp-service) for details.
 
-***tgbot*** sends the tracking status to our telegram bot.
+***online_tracker*** tracks the online and offline timings of your WhatsApp contact. It will check the online status and will immediately stores that data into a .txt file. Blog link: [https://github.com/rpotter12/rpotter12.github.io/blob/master/blogs/blog3-tracking-26-07-2019.md](https://github.com/rpotter12/rpotter12.github.io/blob/master/blogs/blog3-tracking-26-07-2019.md)
 
-***messageblast*** is a message bomb script. It sends messages to your WhatsApp contact continously. The number of messages is decided by you. You can blast infinite number of messages to your WhatsApp contact.
+***telegram_bot*** sends the tracking status to our telegram bot.
 
-***messagetimer*** is a message timer script. It sends messages to your WhatsApp contact from time to time. The number of messages and type of messages is decided by you. It's possible to send messages at random interval and the message type is chosen randomly.
+***message_blast*** is a message bomb script. It sends messages to your WhatsApp contact continously. The number of messages is decided by you. You can blast infinite number of messages to your WhatsApp contact.
 
-***savechat*** is a script to save all the chat which we backup on our google drive.
+***message_timer*** is a message timer script. It sends messages to your WhatsApp contact from time to time. The number of messages and type of messages is decided by you. It's possible to send messages at random interval and the message type is chosen randomly.
+
+***save_chat*** is a script to save all the chat which we backup on our google drive.
+
+***schedule_message*** is a script to send message at a schedule time.
+
+***about_changer*** is a script to change the about section of your profile. User can select personal quote, news, quotes, etc.
+
+***get_news*** is a script to get all types of news in your whatsapp group.
+
+***get_profile_photos*** is a script to download profile photos of all the contacts in your whatsapp contact list.
 
 ---
 
@@ -31,68 +47,26 @@ It is command line software through which you can play with your WhatsApp. It is
 
 ### Install whatsapp-play from PyPI: <br />
 Windows: `python -m pip install wplay` <br />
-Unix: `python3 -m pip install wplay` <br />
+Unix/Linux: `python3 -m pip install wplay` <br />
 **Installation Video:** [Simple Installation Link](https://youtu.be/HS6ksu6rCxQ)
 
 ### Alternate way - Run whatsapp-play from source code: <br />
-`git clone https://github.com/rpotter12/whatsapp-play.git` <br />
-`cd 'whatsapp-play'` <br />
-Windows: `python -m pip install -r requirements.txt` <br />
-Unix: `python3 -m pip install -r requirements.txt` <br />
-Windows: `python -m wplay -h` <br />
-Unix: `python3 -m wplay -h` <br />
+**Windows**<br />
+`$ git clone https://github.com/rpotter12/whatsapp-play.git` <br />
+`$ cd 'whatsapp-play'` <br />
+`$ python -m pip install -r requirements.txt` <br />
+`$ python -m wplay -h` <br />
+
+**Unix/Linux/Mac**<br />
+`$ git clone https://github.com/rpotter12/whatsapp-play.git` <br />
+`$ cd 'whatsapp-play'` <br />
+`$ python3 -m pip install -r requirements.txt` <br />
+`$ python3 -m wplay -h` <br />
 
 ## Usage
+<img src="images/usage.png"><br />
 
-<img src="/images/usage.png"><br>
-### Usage of commands
-
-1. Help - Used to display the help section of Wplay
-```shell
-python3 -m wplay -h
-```
-2. Wchat - Used for chatting on whatsapp using CLI
-```shell
-python3 -m wplay -wc "AnyName"
-```
-3. Wbomb - Used for message bombing aperson whatsapp using CLI
-```shell
-python3 -m wplay -wb "AnyName"
-```
-4. Wtrack - Used for tracking whatsapp status of a user 
-```shell
-python3 -m wplay -wt "AnyName"
-```
-5. Wtimer - Used for sending different message to a user in different time intervals
-```shell
-python3 -m wplay -wti "AnyName"
-```
-6. Wtelegrambot - Used to send tracking status to telegram bot
-```shell
-python3 -m wplay -wtb "AnyName"
-```
-7. Pull - Used to pull the saved chats from whatsapp to your local system.
-
-To download all the chats, write the exact command:
-```shell
-wplay -pull "Databases/msgstore.db.crypt12"
-```
-8. Schedule - Used to deliver a message at a scheduled time.
-```shell
-python3 -m wplay --sch "AnyName"
-```
-9. WAbout - Change your about in every second or every 30 min.
-```shell
-python3 -m wplay -wabt
-```
-10. WNews - Get news in whatsapp group.
-```shell
-python3 -m wplay -wnews "AnyName"
-```
-11. WMedia - Download all the images of contacts.
-```shell
-python3 -m wplay -wmedia
-```
+For detailed usage of command visit: [https://github.com/rpotter12/whatsapp-play/wiki/Usage](https://github.com/rpotter12/whatsapp-play/wiki/Usage)
 
 ## Contribute
 
